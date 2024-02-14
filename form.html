@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+  >
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../../static/css/style.css"> 
+  <title>Akıllı evler için enerji verimlilik hesaplayıcısı</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__text">
+      <h1>Evinizin enerji verimliliğini hesaplayın!</h1>
+      <p>Girişimde bulunun ve aşırı enerji tüketimi sorununu çözün!</p>
+    </div>
+  </header>
+  <main>
+    {% block content %}
+    <form action="{{ url_for('submit_form') }}" method="post" class="form">
+      <div class="user">
+        <ul class="user-info">
+            <li class="user-info__item">
+
+                <label for="name">Sizin adınız</label>
+                <input type="text" name="isim" id="name" placeholder="Tam adınızı girin" required>
+            </li>
+            <li class="user-info__item">
+                <!-- Görev 4. Kullanıcının e-posta adresi için bir giriş alanı oluşturun -->
+                
+            </li>
+        </ul>
+        <!--Adres ve isim için alanlar-->
+        <ul class="address-date">
+            <li class="user-info__item">
+
+                <label for="address">Adresinizi belirtin</label>
+                <input type="text" name="address" id="address" placeholder="Adresiniz" required>
+            </li>
+            <li class="user-info__item">
+
+                <label for="date">Uzmanlarımızın gelmesi için rahat olduğunuz tarihi belirtin</label>
+                <input type="date" name="date" id="date" required>
+            </li>
+        </ul>
+    </div>
+    <button class="button" type="submit">Hazır!</button>
+    </form>
+    {% endblock %}
+  </main>
+  <footer>
+
+  </footer>
+</body>
+</html>
