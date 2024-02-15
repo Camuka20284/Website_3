@@ -8,9 +8,20 @@
   >
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../static/css/style.css">
-  <title>Akıllı evler için enerji verimlilik hesaplayıcısının sonucu</title>
+  <title>Akıllı evler için enerji verimlilik hesaplayıcısı</title>
 </head>
 <body>
-    <h1>Bilgileriniz:</h1>
+  <header class="header">
+    <div class="header__text">
+      <h1>Az önce doldurduğunuz formun içindeki bilgiler:</h1>
+    </div>
+  </header>
+    <h3>İsim: {{ name }}</h3>
+    <h3>E-posta: {{ email }}</h3>
+    <h3>Adres: {{ adres }}</h3>
+    <h3>Tarih: {{ date }}</h3>
+  <footer>
+    <h2>{{ date }} tarihinde görüşmek üzere hoşçakalın!</h2>
+  </footer>
 </body>
 </html>
